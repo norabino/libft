@@ -96,9 +96,3 @@ char	**ft_split(char const *str, char c)
 	dst[tab[2]] = 0;
 	return (dst);
 }
-
-/*
-tab[0] = start
-tab[1] = end
-tab[2] = i
-*/

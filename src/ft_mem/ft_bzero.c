@@ -23,9 +23,3 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-/*
-int main(void)
-{
-    int tab[] = {54, 85, 20, 63, 21};
-    ft_bzero(tab, 5);    
-}*/

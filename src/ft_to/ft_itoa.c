@@ -56,9 +56,3 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
-/*
-int main(void)
-{
-    int a = 0;
-    printf("My func : %s", ft_itoa(a));
-}*/

@@ -18,9 +18,3 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
-/*
-int	main(void)
-{
-	printf("%d \n", ft_isdigit(52));
-	printf("%d", ft_isdigit(48));
-}*/

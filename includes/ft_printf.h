@@ -17,9 +17,9 @@
 # include <stdlib.h>
 # include <stdarg.h>
 # include <limits.h>
+# include "libft.h"
 
 int				ft_printf(const char *format, ...);
-int				ft_print_i(void);
 int				ft_size(long long nb, long long divisor);
 int				ft_print_c(char c);
 int				ft_print_s(char	*str);
@@ -29,6 +29,5 @@ int				ft_print_p(void *nb);
 int				ft_print_x(unsigned int nb);
 int				ft_print_bx(unsigned int nb);
 void			ft_putnbr_base(long nb, char *str, int *ptr_len);
-size_t			ft_strlen(const char *str);
 
 #endif

@@ -15,11 +15,12 @@
 char	*ft_read_to_remainder(int fd, char *remainder)
 {
 	char	*buffer;
+	char	*tmp;
 	int		read_bytes;
 
 	buffer = malloc((BUFFER_SIZE + 1) * sizeof(char));
 	if (!buffer)
-		return (NULL);
+		return (free(remainder), NULL);
 	read_bytes = 1;
 	while (!ft_strchr(remainder, '\n') && read_bytes != 0)
 	{
@@ -27,7 +28,9 @@ char	*ft_read_to_remainder(int fd, char *remainder)
 		if (read_bytes == -1)
 			return (free(remainder), free(buffer), NULL);
 		buffer[read_bytes] = 0;
-		remainder = ft_strjoin(remainder, buffer);
+		tmp = ft_strjoin(remainder, buffer);
+		free(remainder);
+		remainder = tmp;
 		if (!remainder)
 			return (free(buffer), NULL);
 	}
@@ -85,6 +88,10 @@ char	*get_next_line(int fd)
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
+	if (!remainder)
+		remainder = ft_strdup("");
+	if (!remainder)
+		return (NULL);
 	remainder = ft_read_to_remainder(fd, remainder);
 	if (!remainder)
 		return (NULL);
@@ -92,34 +99,3 @@ char	*get_next_line(int fd)
 	remainder = ft_new_remainder(remainder);
 	return (line);
 }
-
-/*#include <fcntl.h>
-int	main(void)
-{
-	char	*line;
-	int		i;
-	int		fd1;
-	int		fd2;
-	int		fd3;
-	fd1 = open("tests/test.txt", O_RDONLY);
-	fd2 = open("tests/test2.txt", O_RDONLY);
-	fd3 = open("tests/test3.txt", O_RDONLY);
-	i = 1;
-	while (i < 7)
-	{
-		line = get_next_line(fd1);
-		//printf("line [%02d]: %s", i, line);
-		free(line);
-		line = get_next_line(fd2);
-		//printf("line [%02d]: %s", i, line);
-		free(line);
-		line = get_next_line(fd3);
-		//printf("line [%02d]: %s", i, line);
-		free(line);
-		i++;
-	}
-	close(fd1);
-	close(fd2);
-	close(fd3);
-	return (0);
-}*/

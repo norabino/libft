@@ -22,14 +22,8 @@
 # endif
 
 char	*get_next_line(int fd);
-char	*ft_get_line(char *str);
 char	*ft_read_to_remainder(int fd, char *remainder);
-
-/*
-int		ft_strlen(char *str);
-char	*ft_strchr(char *str, char c);
-char	*ft_substr(char *s, unsigned int start, int len);
-char	*ft_strjoin(char *s1, char *s2);
-*/
+char	*ft_get_a_line(char *str);
+char	*ft_new_remainder(char *remainder);
 
 #endif

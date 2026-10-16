@@ -40,9 +40,3 @@ int	ft_atoi(const char *nptr)
 	}
 	return (res * sign);
 }
-
-/*int main(void)
-{
-    char    *str = "12345";
-    ft_printf("My func :%d\n", ft_atoi(str));
-}*/
