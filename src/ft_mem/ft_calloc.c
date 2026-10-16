@@ -28,3 +28,19 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	}
 	return (str);
 }
+
+/*
+int main(void)
+{
+	int size = 8539;
+
+	void * d1 = ft_calloc(size, sizeof(int));
+	void * d2 = calloc(size, sizeof(int));
+	if (memcmp(d1, d2, size * sizeof(int)))
+		printf("non");
+	else
+		printf("oui");
+	free(d1);
+	free(d2);
+	return (0);
+}*/

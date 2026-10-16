@@ -40,3 +40,10 @@ int	ft_atoi(const char *nptr)
 	}
 	return (res * sign);
 }
+/*
+int main(void)
+{
+    char    *str = "";
+    printf("My func :%d\n", ft_atoi(str));
+    printf("Og func :%d\n", atoi(str));
+}*/

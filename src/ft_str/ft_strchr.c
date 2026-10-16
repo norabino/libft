@@ -25,3 +25,12 @@ char	*ft_strchr(const char *str, int c)
 		return ((char *)&str[i]);
 	return (NULL);
 }
+/*
+int main(void)
+{
+    char    *str = "tripouille";
+    int    c = 't';
+    printf("Og func : %s\n", strchr(str, c));
+    printf("My func : %s\n", ft_strchr(str, c));
+    return 0;
+}*/

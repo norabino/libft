@@ -20,3 +20,12 @@ int	ft_isalnum(int c)
 		return (1);
 	return (0);
 }
+/*
+#include <stdio.h>
+int	main(void)
+{
+	char	c = '1';
+	printf("Og func : %d \n", isalnum(c));
+	printf("My func : %d", ft_isalnum(c));
+}
+*/

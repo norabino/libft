@@ -35,3 +35,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str[i] = 0;
 	return (str);
 }
+/*
+#include <stdio.h>
+int main(void)
+{
+    printf("%s", ft_substr("hola", 0, 18446744073709551615));
+}*/

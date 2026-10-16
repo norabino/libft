@@ -91,4 +91,7 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all bonus clean fclean re
+norm:
+	@norminette $(addprefix $(SRC_DIR)/, $(SRCS) $(SRCS_BONUS)) includes | grep -v Norme -B1 || true
+
+.PHONY: all bonus clean fclean re norm

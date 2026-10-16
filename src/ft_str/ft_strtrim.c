@@ -41,3 +41,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 		;
 	return (ft_substr(s1, i, j - i + 1));
 }
+
+/*
+int main(void)
+{
+    char    *str1 = "Hello   Please Trim me !H";
+    printf("%s", ft_strtrim(str1, "H"));
+    return (0);
+}*/

@@ -37,3 +37,13 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
+/*
+int main()
+{
+    char    *big = "";
+    char    *little = "oh no not the empty string !";
+    size_t  len = ft_strlen(little);
+
+    printf("My func : %s", ft_strnstr(big, little, len));
+    return (0);
+}*/

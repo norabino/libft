@@ -96,3 +96,23 @@ char	**ft_split(char const *str, char c)
 	dst[tab[2]] = 0;
 	return (dst);
 }
+
+/*
+tab[0] = start
+tab[1] = end
+tab[2] = i
+*/
+/*
+#include <stdio.h>
+int		main()
+{
+ 	char **arr;
+    
+ 	arr = ft_split("^^^1^^2a,^^^^3^^^^--h^^^^", '^');
+    int i = 0;
+    while(arr[i])
+    {
+        printf("%s\n", arr[i]);
+        i++;
+    }
+}*/
