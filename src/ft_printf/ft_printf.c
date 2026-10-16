@@ -6,7 +6,7 @@
 /*   By: norabino <norabino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 11:42:04 by norabino          #+#    #+#             */
-/*   Updated: 2025/01/16 09:51:14 by norabino         ###   ########.fr       */
+/*   Updated: 2026/10/16 12:07:59 by norabino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_isconv(char c)
 
 	i = 0;
 	charset = "cspiudxX%";
-	while (charset)
+	while (charset[i])
 	{
 		if (charset[i] == c)
 			return (1);
